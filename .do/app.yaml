@@ -1,0 +1,15 @@
+name: powerhouse-agency
+region: nyc
+domains:
+  - domain: powerhouse-agency.com
+    type: PRIMARY
+  - domain: www.powerhouse-agency.com
+    type: ALIAS
+static_sites:
+  - name: site
+    git:
+      repo_clone_url: https://github.com/dantecker/powerhouse-agency.git
+      branch: main
+    source_dir: /
+    index_document: index.html
+    error_document: 404.html
