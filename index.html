@@ -48,17 +48,20 @@
         <svg viewBox="0 0 560 470" role="img" aria-label="Powerhouse logo — a neon diamond emblem">
           <defs>
             <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="9" result="blur"/>
+              <feGaussianBlur stdDeviation="5.5" result="blur"/>
+              <feComponentTransfer in="blur" result="dimBlur">
+                <feFuncA type="linear" slope="0.5"/>
+              </feComponentTransfer>
               <feMerge>
-                <feMergeNode in="blur"/>
+                <feMergeNode in="dimBlur"/>
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
           </defs>
           <g filter="url(#neonGlow)">
-            <polygon points="280,42 540,205 280,440 20,205" fill="none" stroke="#54e3ff" stroke-width="22" stroke-linejoin="miter"/>
-            <text x="280" y="212" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="128" letter-spacing="2" fill="#6ce7ff">POWER</text>
-            <text x="280" y="330" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="128" letter-spacing="2" fill="#6ce7ff">HOUSE</text>
+            <polygon points="280,42 540,205 280,440 20,205" fill="none" stroke="#3cd9ff" stroke-width="22" stroke-linejoin="miter"/>
+            <text x="280" y="212" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="128" letter-spacing="2" fill="#2fd4ff">POWER</text>
+            <text x="280" y="330" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="128" letter-spacing="2" fill="#2fd4ff">HOUSE</text>
           </g>
         </svg>
       </div>
