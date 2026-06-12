@@ -170,6 +170,7 @@ h2.display { font-size: clamp(1.9rem, 4vw, 2.9rem); }
 .hero-logo svg {
   width: min(470px, 100%);
   margin-inline: auto;
+  overflow: visible;
   filter: drop-shadow(0 0 22px rgba(75, 225, 255, 0.16));
 }
 

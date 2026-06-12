@@ -57,15 +57,27 @@
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
+            <filter id="frameGlow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="8" result="tight"/>
+              <feGaussianBlur stdDeviation="26" result="wide"/>
+              <feComponentTransfer in="wide" result="wideDim">
+                <feFuncA type="linear" slope="0.7"/>
+              </feComponentTransfer>
+              <feMerge>
+                <feMergeNode in="wideDim"/>
+                <feMergeNode in="tight"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
           </defs>
-          <g filter="url(#neonGlow)">
-            <polygon points="217,38 683,38 860,277 450,702 40,277" fill="none" stroke="#3cd9ff" stroke-width="30" stroke-linejoin="miter"/>
+          <g filter="url(#frameGlow)">
+            <polygon points="217,38 683,38 860,277 450,702 40,277" fill="none" stroke="#45ddff" stroke-width="30" stroke-linejoin="miter"/>
           </g>
-          <text x="450" y="270" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="208" letter-spacing="4" fill="#081628" stroke="#081628" stroke-width="28" stroke-linejoin="round">POWER</text>
-          <text x="450" y="438" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="208" letter-spacing="4" fill="#081628" stroke="#081628" stroke-width="28" stroke-linejoin="round">HOUSE</text>
+          <text x="450" y="252" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="192" letter-spacing="4" fill="#081628" stroke="#081628" stroke-width="18" stroke-linejoin="round">POWER</text>
+          <text x="450" y="428" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="192" letter-spacing="4" fill="#081628" stroke="#081628" stroke-width="18" stroke-linejoin="round">HOUSE</text>
           <g filter="url(#neonGlow)">
-            <text x="450" y="270" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="208" letter-spacing="4" fill="#2fd4ff">POWER</text>
-            <text x="450" y="438" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="208" letter-spacing="4" fill="#2fd4ff">HOUSE</text>
+            <text x="450" y="252" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="192" letter-spacing="4" fill="#2fd4ff">POWER</text>
+            <text x="450" y="428" text-anchor="middle" font-family="Anton, 'Arial Black', sans-serif" font-size="192" letter-spacing="4" fill="#2fd4ff">HOUSE</text>
           </g>
         </svg>
       </div>
